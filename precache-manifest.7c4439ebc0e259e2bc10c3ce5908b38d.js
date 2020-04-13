@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2b36cf80b747cd2c4d9e334bd72a0bb",
+    "revision": "c15ee98ba6e7087c38230b3c3126969b",
     "url": "https://nigazz58.github.io/movie/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://nigazz58.github.io/movie/static/js/2.37d8d8cc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "281d3574fccd143aac4f",
-    "url": "https://nigazz58.github.io/movie/static/js/main.d11cd811.chunk.js"
+    "revision": "4875afda62beaabaa1b9",
+    "url": "https://nigazz58.github.io/movie/static/js/main.0ab04933.chunk.js"
   },
   {
     "revision": "06d010cc437857e35a23",
