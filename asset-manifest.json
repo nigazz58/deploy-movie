@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "https://nigazz58.github.io/movie/static/js/main.0ab04933.chunk.js",
-    "main.js.map": "https://nigazz58.github.io/movie/static/js/main.0ab04933.chunk.js.map",
+    "main.js": "https://nigazz58.github.io/movie/static/js/main.1ee80129.chunk.js",
+    "main.js.map": "https://nigazz58.github.io/movie/static/js/main.1ee80129.chunk.js.map",
     "runtime-main.js": "https://nigazz58.github.io/movie/static/js/runtime-main.03807963.js",
     "runtime-main.js.map": "https://nigazz58.github.io/movie/static/js/runtime-main.03807963.js.map",
     "static/js/2.37d8d8cc.chunk.js": "https://nigazz58.github.io/movie/static/js/2.37d8d8cc.chunk.js",
     "static/js/2.37d8d8cc.chunk.js.map": "https://nigazz58.github.io/movie/static/js/2.37d8d8cc.chunk.js.map",
     "index.html": "https://nigazz58.github.io/movie/index.html",
-    "precache-manifest.7c4439ebc0e259e2bc10c3ce5908b38d.js": "https://nigazz58.github.io/movie/precache-manifest.7c4439ebc0e259e2bc10c3ce5908b38d.js",
+    "precache-manifest.e2c05775ef531db6d667492b861c4b4c.js": "https://nigazz58.github.io/movie/precache-manifest.e2c05775ef531db6d667492b861c4b4c.js",
     "service-worker.js": "https://nigazz58.github.io/movie/service-worker.js",
     "static/js/2.37d8d8cc.chunk.js.LICENSE.txt": "https://nigazz58.github.io/movie/static/js/2.37d8d8cc.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.03807963.js",
     "static/js/2.37d8d8cc.chunk.js",
-    "static/js/main.0ab04933.chunk.js"
+    "static/js/main.1ee80129.chunk.js"
   ]
 }
