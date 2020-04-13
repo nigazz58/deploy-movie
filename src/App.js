@@ -13,7 +13,7 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter>
+      <BrowserRouter basename={window.location.pathname || ''}>
         <Header />
         <Switch>
           <Route exact path="/" component={Intro} />
