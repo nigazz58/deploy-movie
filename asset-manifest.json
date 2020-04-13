@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/deploy-movie/static/js/main.dac58fd4.chunk.js",
-    "main.js.map": "/deploy-movie/static/js/main.dac58fd4.chunk.js.map",
+    "main.js": "/deploy-movie/static/js/main.59a94aff.chunk.js",
+    "main.js.map": "/deploy-movie/static/js/main.59a94aff.chunk.js.map",
     "runtime-main.js": "/deploy-movie/static/js/runtime-main.3530886a.js",
     "runtime-main.js.map": "/deploy-movie/static/js/runtime-main.3530886a.js.map",
     "static/js/2.5ecc55c1.chunk.js": "/deploy-movie/static/js/2.5ecc55c1.chunk.js",
     "static/js/2.5ecc55c1.chunk.js.map": "/deploy-movie/static/js/2.5ecc55c1.chunk.js.map",
     "index.html": "/deploy-movie/index.html",
-    "precache-manifest.72f7f3f004c29ef3c90342620ca15c60.js": "/deploy-movie/precache-manifest.72f7f3f004c29ef3c90342620ca15c60.js",
+    "precache-manifest.43b18f3675c3b540a9a425371f05fc61.js": "/deploy-movie/precache-manifest.43b18f3675c3b540a9a425371f05fc61.js",
     "service-worker.js": "/deploy-movie/service-worker.js",
     "static/js/2.5ecc55c1.chunk.js.LICENSE.txt": "/deploy-movie/static/js/2.5ecc55c1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3530886a.js",
     "static/js/2.5ecc55c1.chunk.js",
-    "static/js/main.dac58fd4.chunk.js"
+    "static/js/main.59a94aff.chunk.js"
   ]
 }
