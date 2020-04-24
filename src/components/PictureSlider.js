@@ -26,7 +26,7 @@ function PictureSlider({ basePath, stillCuts }) {
   };
 
   return (
-    <S.SliderWrap className={stillCuts.length > 1 && 'plural'}>
+    <S.SliderWrap className={stillCuts.length > 2 && 'plural'}>
       <Slider {...settings}>
         {stillCuts.map(item => {
           return (

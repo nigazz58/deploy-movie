@@ -4,9 +4,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 import fetchData from 'utils/fetchData';
-import { CATEGORY } from 'utils/common';
+import { CATEGORY, IMG_PATH } from 'utils/common';
 import * as loadingActions from 'modules/loading';
 import * as searchActions from 'modules/search';
+import * as dataActions from 'modules/data';
 
 import SearchContainer from 'containers/SearchContainer';
 import Loading from 'components/Loading';
@@ -23,7 +24,19 @@ const Search = ({ location }) => {
       dispatch(loadingActions.startLoading());
       fetchData(`${CATEGORY.SEARCH}movie`, [...queries])
         .then(result => {
-          dispatch(searchActions.setLists(result));
+          if (result.results.length > 0) {
+            dispatch(searchActions.setLists(result));
+
+            const someBgImg = result.results.filter(
+              item => item.backdrop_path !== null,
+            );
+            // console.log(someBgImg[0].backdrop_path);
+            dispatch(
+              dataActions.setBgImg([
+                `${IMG_PATH.w1280}${someBgImg[0].backdrop_path}`,
+              ]),
+            );
+          }
           return 'finished getting data';
         })
         .then(() => {

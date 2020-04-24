@@ -23,9 +23,11 @@ const Detail = ({ match }) => {
       fetchData(`${CATEGORY.MOVIE_DETAIL}${id}`, [language]).then(result => {
         // console.log(result);
         dispatch(dataActions.setSelMovie(result));
-        dispatch(
-          dataActions.setBgImg([`${IMG_PATH.w1280}${result.backdrop_path}`]),
-        );
+        if (result.backdrop_path !== '') {
+          dispatch(
+            dataActions.setBgImg([`${IMG_PATH.w1280}${result.backdrop_path}`]),
+          );
+        }
         return 'finished';
       });
 

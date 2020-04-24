@@ -93,4 +93,8 @@ export const Inner = styled.div`
 /* title */
 export const PageTitle = styled.h2`
   font-size: 2rem;
+
+  @media screen and (max-width: 480px) {
+    font-size: 1.25rem;
+  }
 `;

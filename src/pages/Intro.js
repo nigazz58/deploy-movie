@@ -30,6 +30,7 @@ const Intro = ({ location, history }) => {
           });
           dispatch(dataActions.setMovies(moviesArr));
           dispatch(dataActions.setBgImgs(bgImgsArr));
+          // dispatch(dataActions.setBgImg([bgImgsArr[0]]));
           dispatch(dataActions.setPath(url));
           dispatch(menuActions.setActive(url));
 

@@ -28,6 +28,7 @@ const Headline = styled.div`
 `;
 
 const Box = styled.div`
+  border-bottom: 1px dashed #ddd;
   &:after {
     display: block;
     content: '';
@@ -41,7 +42,7 @@ const PosterWrap = styled.div`
   position: relative;
   float: left;
   width: 240px;
-  margin: -100px 30px 30px 0;
+  margin: -100px 30px 15px 0;
 
   ${GradeIconWrap} {
     position: absolute;
@@ -50,7 +51,7 @@ const PosterWrap = styled.div`
   }
 
   @media screen and (max-width: 600px) {
-    width: 100px;
+    width: 120px;
     margin: -60px 15px 15px 0;
 
     ${GradeIconWrap} {
@@ -79,7 +80,7 @@ const TitleBox = styled.div`
 
   @media screen and (max-width: 600px) {
     h1 {
-      font-size: 1.25rem;
+      font-size: 1.5rem;
     }
   }
 `;
@@ -114,9 +115,10 @@ const TextArea = styled.div`
 
   p {
     font-size: 1.2rem;
+    margin-bottom: 30px;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 480px) {
     div {
       margin-bottom: 0.5rem;
     }

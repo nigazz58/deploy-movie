@@ -6,6 +6,8 @@ const ImgWrap = styled.div`
   margin: 0 auto;
   width: 260px;
   height: 146px;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 
   > img {
     overflow: hidden;

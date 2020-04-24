@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { createStore } from 'redux';
+import { devToolsEnhancer } from 'redux-devtools-extension';
 import { Provider } from 'react-redux';
 import rootReducers from 'modules';
-import { devToolsEnhancer } from 'redux-devtools-extension';
 
 import App from 'App';
 import * as serviceWorker from 'serviceWorker';

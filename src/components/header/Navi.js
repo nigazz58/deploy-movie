@@ -33,7 +33,7 @@ const MenuDialog = styled.div`
 
   .dimmed {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     left: 0;
     top: 0;
     right: 0;
@@ -52,7 +52,7 @@ const MenuDialog = styled.div`
     }
 
     a {
-      font-size: 6rem;
+      font-size: 10vh;
       opacity: 0.4;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -66,7 +66,7 @@ const MenuDialog = styled.div`
 
     @media screen and (max-width: 480px) {
       a {
-        font-size: 3rem;
+        /* font-size: 3rem; */
       }
     }
   }

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import GlobalStyle from 'styles/global.style';
 
@@ -13,16 +13,16 @@ const App = () => {
   return (
     <>
       <GlobalStyle />
-      <BrowserRouter basename={window.location.pathname || ''}>
+      <HashRouter>
         <Header />
         <Switch>
           <Route exact path="/" component={Intro} />
-          <Route path="/movie/:queries" component={Intro} />
+          <Route exact path="/movie/:id" component={Intro} />
           <Route path="/detail/:id" component={Detail} />
-          <Route path="/search/:queries" component={Search} />
+          <Route path="/search/:id" component={Search} />
           <Route component={NotFound404} />
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 };

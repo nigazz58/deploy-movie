@@ -21,9 +21,13 @@ const useStyles = makeStyles(theme => ({
     '&.filled': {
       backgroundColor: 'rgba(0,0,0,1)',
     },
+
+    '& div[class*=Toolbar]': {
+      minHeight: '60px',
+    },
   },
   menuButton: {
-    // marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(0),
   },
   title: {
     flexGrow: 1,
@@ -51,8 +55,8 @@ const Header = () => {
   const classes = useStyles();
 
   const handleScroll = () => {
-    const headerH = document.querySelector('header').offsetHeight;
-    if (window.scrollY > headerH) {
+    // const headerH = document.querySelector('header').offsetHeight;
+    if (window.scrollY > 0) {
       appBar.current.classList.add('filled');
     } else {
       appBar.current.classList.remove('filled');

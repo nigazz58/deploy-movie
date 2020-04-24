@@ -74,7 +74,7 @@ const SliderItem = styled.div`
       padding: 17px 40px 15px;
       left: 50%;
       top: 50%;
-      background-color: rgba(255, 0, 0, 0);
+      /* background-color: rgba(255, 0, 0, 0); */
       transform: translate(-50%, -50%);
       box-sizing: border-box;
       transition: all 0.3s ease;
@@ -195,9 +195,9 @@ const SliderWrap = styled.div`
           opacity: 1;
           background-color: rgba(0, 0, 0, 0.4);
 
-          span {
+          /* span {
             background-color: rgba(255, 0, 0, 0.8);
-          }
+          } */
         }
 
         ${ImgItem}:after {
