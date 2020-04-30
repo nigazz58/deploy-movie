@@ -24,7 +24,9 @@ const DetailContainer = () => {
     <DetailWrap>
       <Inner>
         <Background bgImgs={bgImg} grayscale />
+        {/* {!isEmptyObject(selMovie) && ( */}
         <SpotItem {...selMovie} certification={releaseDates.certification} />
+        {/* )} */}
         {casts.length > 0 && (
           <ArticleItem title="출연">
             <AvatarSlider basePath={`${IMG_PATH.w185}`} casts={casts} />

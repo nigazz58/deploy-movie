@@ -17,7 +17,7 @@ const App = () => {
         <Header />
         <Switch>
           <Route exact path="/" component={Intro} />
-          <Route exact path="/movie/:id" component={Intro} />
+          <Route path="/movie/:id" component={Intro} />
           <Route path="/detail/:id" component={Detail} />
           <Route path="/search/:id" component={Search} />
           <Route component={NotFound404} />

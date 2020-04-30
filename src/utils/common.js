@@ -35,3 +35,54 @@ export const shuffleArray = arr => {
   }
   return inArr;
 };
+
+export const isEmptyObject = obj => {
+  return Object.keys(obj).length === 0;
+};
+
+export const deviceCheck = () => {
+  const pcDevice = 'win16|win32|win64|mac|macintel';
+  const thisDevice = navigator.platform;
+  let result = '';
+
+  if (thisDevice) {
+    if (pcDevice.indexOf(navigator.platform.toLowerCase()) < 0) {
+      result = 'MOBILE';
+    } else {
+      result = 'PC';
+    }
+    // console.log(result);
+  }
+  return result;
+};
+
+// slick slider bugfix for mobile scrolling
+let firstClientX = 0;
+
+function touchStart(e) {
+  firstClientX = e.touches[0].clientX;
+}
+
+function preventTouch(e) {
+  const minValue = 30; // threshold
+  const clientX = e.touches[0].clientX - firstClientX;
+  // Vertical scrolling does not work when you start swiping horizontally.
+  if (Math.abs(clientX) > minValue) {
+    e.preventDefault();
+    e.returnValue = false;
+    return false;
+  }
+  return 1;
+}
+
+export const touchSlideOn = () => {
+  window.addEventListener('touchstart', touchStart);
+  window.addEventListener('touchmove', preventTouch, { passive: false });
+};
+
+export const touchSlideOff = () => {
+  window.removeEventListener('touchstart', touchStart);
+  window.removeEventListener('touchmove', preventTouch, {
+    passive: false,
+  });
+};

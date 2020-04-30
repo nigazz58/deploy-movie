@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -15,6 +15,7 @@ const Detail = ({ match }) => {
   const { id } = match.params;
   const { isLoading } = useSelector(store => store.loading);
   const dispatch = useDispatch();
+  const [loadedPage, setLoadedpage] = useState(false);
 
   useEffect(() => {
     function init() {
@@ -69,7 +70,7 @@ const Detail = ({ match }) => {
       fetchData(`${CATEGORY.MOVIE_DETAIL}${id}/videos`)
         .then(result => {
           // console.log(result);
-          const videoArr = result.results;
+          const videoArr = result.results.slice(0, 10);
           // const imagesArr = result.backdrops.map(item => {
           //   return item.file_path;
           // });
@@ -81,14 +82,14 @@ const Detail = ({ match }) => {
         .then(() => {
           setTimeout(() => {
             dispatch(loadingActions.finishLoading());
+            setLoadedpage(true);
           }, 500);
         });
     }
     init();
   }, []);
 
-  // return <>{isLoading ? <Loading /> : <DetailContainer />}</>;
-  return isLoading ? <Loading /> : <DetailContainer />;
+  return isLoading ? <Loading /> : loadedPage && <DetailContainer />;
 };
 
 Detail.propTypes = {

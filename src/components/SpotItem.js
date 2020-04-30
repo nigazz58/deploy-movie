@@ -50,7 +50,12 @@ const PosterWrap = styled.div`
     top: 15px;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
+    width: 180px;
+    margin: -80px 15px 15px 0;
+  }
+
+  @media screen and (max-width: 480px) {
     width: 120px;
     margin: -60px 15px 15px 0;
 
@@ -80,7 +85,7 @@ const TitleBox = styled.div`
 
   @media screen and (max-width: 600px) {
     h1 {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
 `;
@@ -105,9 +110,10 @@ const TextArea = styled.div`
         content: '';
         position: absolute;
         left: -15px;
-        top: 4px;
+        top: 10%;
+        bottom: 10%;
         width: 1px;
-        height: 12px;
+        height: 80%;
         border-left: 1px solid #ccc;
       }
     }
@@ -128,8 +134,13 @@ const TextArea = styled.div`
       display: block;
       font-size: 0.875rem;
 
+      li {
+        list-style: disc;
+        margin-left: 20px;
+      }
+
       li + li {
-        margin-left: 0;
+        margin-left: 20px;
         &:before {
           display: none;
         }
@@ -137,6 +148,12 @@ const TextArea = styled.div`
     }
     p {
       font-size: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 768px) {
+    ul > li span {
+      display: block;
     }
   }
 `;
@@ -197,9 +214,18 @@ const SpotItem = props => {
             />
           </div>
           <ul>
-            <li>장르 : {genres.map(item => item.name).join(' / ')}</li>
-            <li>개봉일 : {releaseDate}</li>
-            <li>러닝타임 : {runtime}분</li>
+            <li>
+              <span>장르 : </span>
+              <span>{genres.map(item => item.name).join(' / ')}</span>
+            </li>
+            <li>
+              <span>개봉일 : </span>
+              <span>{releaseDate}</span>
+            </li>
+            <li>
+              <span>러닝타임 : </span>
+              <span>{runtime}분</span>
+            </li>
           </ul>
           {overview ? <p>{overview}</p> : <p>등록된 줄거리가 없습니다.</p>}
         </TextArea>

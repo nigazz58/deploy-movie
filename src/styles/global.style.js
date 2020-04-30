@@ -4,6 +4,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
   ${reset}
 
+  html, body, #root {height: 100%;}
+
   body { 
     background: #000;
     color: #fff;

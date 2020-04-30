@@ -46,8 +46,7 @@ const SliderWrap = styled.div`
       right: 0;
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
 
@@ -69,6 +68,12 @@ const SliderWrap = styled.div`
     position: relative;
     bottom: 0;
     margin-top: 15px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .slick-dots > li {
+      margin: 0;
+    }
   }
 `;
 

@@ -10,6 +10,7 @@ const IntroContainer = () => {
 
   return (
     <>
+      {/* <TestResultBox /> */}
       <Background bgImgs={bgImgs} selIdx={selIdx} />
       <IntroCarousel
         movies={movies}

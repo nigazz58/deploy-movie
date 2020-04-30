@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import { touchSlideOn, touchSlideOff } from 'utils/common';
 import { makeStyles } from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';
 
@@ -21,6 +22,13 @@ const useStyles = makeStyles(theme => ({
 
 function AvatarSlider({ basePath, casts }) {
   const classes = useStyles();
+
+  useEffect(() => {
+    touchSlideOn();
+    return () => {
+      touchSlideOff();
+    };
+  }, []);
 
   function PrevArrow(props) {
     const { className, onClick } = props;
@@ -77,17 +85,24 @@ function AvatarSlider({ basePath, casts }) {
         },
       },
       {
-        breakpoint: 640,
+        breakpoint: 768,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 640,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
     ],

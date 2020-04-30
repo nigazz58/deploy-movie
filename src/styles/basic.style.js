@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 // Values
-export const headerHeight = '56px';
+export const headerHeight = '60px';
 export const headerWidthLaptop = '1200px';
 
 // Colors
@@ -56,11 +56,16 @@ export const Layout = styled.div`
 `;
 
 export const Wrap = styled.div`
-  padding-top: 100px;
+  padding-top: 164px;
   padding-bottom: 100px;
 
   p {
     margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding-top: 100px;
+    padding-bottom: 0px;
   }
 `;
 
@@ -93,6 +98,12 @@ export const Inner = styled.div`
 /* title */
 export const PageTitle = styled.h2`
   font-size: 2rem;
+  margin-bottom: 10px;
+
+  & span {
+    font-size: 1.25rem;
+    color: #999;
+  }
 
   @media screen and (max-width: 480px) {
     font-size: 1.25rem;

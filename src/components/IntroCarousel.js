@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import * as dataActions from 'modules/data';
 
 import Slider from 'react-slick';
+import { touchSlideOn, touchSlideOff } from 'utils/common';
 import {
   ArrowBackIosOutlined,
   ArrowForwardIosOutlined,
@@ -16,6 +17,13 @@ import * as S from './IntroCarousel.style';
 function IntroCarousel({ movies, posterUrl, selIdx }) {
   const dispatch = useDispatch();
   const sliderRef = useRef();
+
+  useEffect(() => {
+    touchSlideOn();
+    return () => {
+      touchSlideOff();
+    };
+  }, []);
 
   function PrevArrow(props) {
     const { className } = props;

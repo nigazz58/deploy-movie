@@ -49,7 +49,7 @@ const ImgItem = styled.div`
 
 const SliderItem = styled.div`
   overflow: visible;
-  /* padding: 20px 0; */
+  padding: 20px 0;
   outline: 0;
   vertical-align: top;
 
@@ -85,7 +85,7 @@ const SliderItem = styled.div`
 const SliderWrap = styled.div`
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   min-width: 320px;
 
@@ -100,10 +100,10 @@ const SliderWrap = styled.div`
     /* max-height: 510px; */
     margin-top: ${headerHeight};
 
-    .slick-list {
+    /* .slick-list {
       padding-top: 50px !important;
       padding-bottom: 50px !important;
-    }
+    } */
 
     .slick-arrow {
       z-index: 10;

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { withRouter } from 'react-router-dom';
@@ -14,6 +14,7 @@ import Loading from 'components/Loading';
 
 const Search = ({ location }) => {
   const dispatch = useDispatch();
+  const [loadedPage, setLoadedpage] = useState(false);
   const { isLoading } = useSelector(store => store.loading);
   const { lists } = useSelector(store => store.search);
 
@@ -42,12 +43,13 @@ const Search = ({ location }) => {
         .then(() => {
           setTimeout(() => {
             dispatch(loadingActions.finishLoading());
+            setLoadedpage(true);
           }, 500);
         });
     }
   }, [location]);
 
-  return isLoading ? <Loading /> : <SearchContainer />;
+  return isLoading ? <Loading /> : loadedPage && <SearchContainer />;
 };
 
 Search.propTypes = {

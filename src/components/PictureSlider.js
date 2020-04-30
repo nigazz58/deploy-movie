@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
+import { touchSlideOn, touchSlideOff } from 'utils/common';
 import mediumZoom from 'medium-zoom';
 
 import * as S from './PictureSlider.style';
@@ -11,6 +12,10 @@ function PictureSlider({ basePath, stillCuts }) {
       background: 'rgba(0, 0, 0, 1)',
       margin: 30,
     });
+    touchSlideOn();
+    return () => {
+      touchSlideOff();
+    };
   }, []);
 
   const settings = {

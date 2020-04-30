@@ -27,10 +27,10 @@ const useStyles = makeStyles(theme => ({
       transform: 'translate(0, 0)',
     },
 
-    '& div[class*=search]': {
+    '& $search': {
       display: 'flex',
     },
-    '& div[class*=searchIcon]': {
+    '& $searchIcon': {
       display: 'none',
     },
 
@@ -38,7 +38,7 @@ const useStyles = makeStyles(theme => ({
       padding: '0 3px',
     },
 
-    '& div[class*=inputRoot]': {
+    '& $inputRoot': {
       width: '100%',
 
       '& input': {

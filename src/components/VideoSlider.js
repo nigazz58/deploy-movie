@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Slider from 'react-slick';
+import { touchSlideOn, touchSlideOff } from 'utils/common';
 
 import * as S from './VideoSlider.style';
 
@@ -15,6 +16,13 @@ const settings = {
 };
 
 function DetailOtherImgs({ basePath, videos }) {
+  useEffect(() => {
+    touchSlideOn();
+    return () => {
+      touchSlideOff();
+    };
+  }, []);
+
   return (
     <S.SliderWrap>
       <Slider {...settings}>

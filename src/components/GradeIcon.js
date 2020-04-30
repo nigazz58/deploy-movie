@@ -5,7 +5,9 @@ import styled from 'styled-components';
 const Text = styled.span``;
 
 const Grade = styled.div`
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 30px;
   height: 30px;
@@ -15,18 +17,19 @@ const Grade = styled.div`
   color: #fff;
 
   ${Text} {
-    position: absolute;
+    /* position: absolute;
     margin-top: 1px;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     color: inherit;
     font-size: inherit;
+    line-height: 1;
     white-space: nowrap;
   }
 
   &.all {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     background-color: #1abc9c;
   }
 
@@ -43,14 +46,19 @@ const Grade = styled.div`
   }
 
   &.undetermined {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     background-color: #8e44ad;
   }
 
   @media screen and (max-width: 600px) {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     font-size: 0.875rem;
+
+    &.all,
+    &.undetermined {
+      font-size: 0.6875rem;
+    }
   }
 `;
 

@@ -7,6 +7,7 @@ const Article = styled.div`
 
   h2 {
     font-size: 2rem;
+    margin-bottom: 10px;
   }
 
   &:last-child {

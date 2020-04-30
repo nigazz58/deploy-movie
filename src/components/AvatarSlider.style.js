@@ -41,8 +41,7 @@ const SliderWrap = styled.div`
         right: -30px;
       }
 
-      &:hover,
-      &:focus {
+      &:hover {
         background-color: rgba(0, 0, 0, 0.8);
       }
 
